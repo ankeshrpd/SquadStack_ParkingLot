@@ -4,7 +4,7 @@ from typing import Any, List
 
 
 class ParkingLot():
-    def __init__(self, size: int) -> None:
+    def __init__(self, size: int) -> str:
         """ Initializes the parking lot """
         self.parking_lot = [None] * size
         self.size = size

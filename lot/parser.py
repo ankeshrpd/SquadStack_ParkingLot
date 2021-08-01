@@ -15,6 +15,7 @@ class InputParser():
                 if line.startswith('Create'):                    
                     num = int((line.split(' ')[1]))
                     lot = parking.ParkingLot(num)
+                    file1.write(f'Created parking of {num} slots\n')
                 elif line.startswith('Park'):
                     slot = lot.allot(line.split(' ')[1],line.split(' ')[3])
                     file1.writelines(slot+ '\n')
