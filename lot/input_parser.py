@@ -16,28 +16,35 @@ class InputParser():
                     if line.startswith('Create'):
                         num = int(line.split()[1])
                         lot = parking_lot.ParkingLot(num)
+                        print(f'Created parking of {num} slots\n')
                         outfile.writelines(f'Created parking of {num} slots\n')
 
                     elif line.startswith('Park'):
                         car_id = line.split()[1]
                         age = line.split()[3]
                         slot = lot.allot(car_id, age)
+                        print(f'{slot}\n')
                         outfile.writelines(f'{slot}\n')
 
                     elif line.startswith('Leave'):
                         slot_id = int(line.split()[1])
                         slot = lot.unallot(slot_id)
+                        print(f'{slot}\n')
                         outfile.writelines(f'{slot}\n')
 
                     elif line.startswith('Slot_number_for_car_with_number'):
                         car_id = line.split()[1]
                         slot = lot.get_slot_id(car_id)
                         if slot == -1:
+                            print(f'Car with vehicle registration number '
+                                f'"{car_id}" isn\'t parked in the parking lot\n')
                             outfile.write(
                                 f'Car with vehicle registration number '
                                 f'"{car_id}" isn\'t parked in the parking lot\n'
                             )
                         else:
+                            print(f'Car with vehicle registration number '
+                                f'"{car_id}" isn\'t parked in the parking lot\n')
                             outfile.write(f'{slot + 1}\n')
 
                     elif line.startswith('Slot_numbers_for_driver_of_age'):
@@ -45,12 +52,14 @@ class InputParser():
                         slots = map(lambda x: x + 1, slots)
                         slots = map(str, slots)
                         slot_numbers = ','.join(slots)
+                        print(f'{slot_numbers}\n')
                         outfile.write(f'{slot_numbers}\n')
 
                     elif line.startswith('Vehicle_registration_number_for_driver_of_age'):
                         age = line.split()[1]
                         car_ids = lot.get_car_ids_by_age(age)
                         car_ids = ','.join(car_ids)
+                        print(f'{car_ids}\n')
                         outfile.write(f'{car_ids}\n')
 
                     else:
