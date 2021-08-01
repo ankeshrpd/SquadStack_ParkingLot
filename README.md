@@ -8,7 +8,7 @@
   - [InputParser](#3-inputparser)
 
 ## Getting Started
-Start by cloning the repository using: `git clone https://github.com/IamRaviTejaG/fampay-assignment.git` followed by `cd parking_lot`.
+Start by cloning the repository using: `git clone https://github.com/ankeshrpd/SquadStack_ParkingLot.git` followed by `cd SquadStack_ParkingLot`.
 
 To run the program, type:
 ```bash
