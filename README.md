@@ -15,15 +15,19 @@
 
 ## Getting Started
 
-Start by cloning the repository using: `git clone https://github.com/ankeshrpd/SquadStack_ParkingLot.git` followed by `cd fampay-assignment`.
+Start by cloning the repository using: `git clone https://github.com/ankeshrpd/SquadStack_ParkingLot.git` followed by `cd parking-lot`.
 
 Modify the input.txt file in the same folder as per the use case
 
 ## Class Diagram
+<!-- 
+#### NOTE: Multiple Google API keys can be specified to avoid quota exceed errors. To do this, specify them as a single string, separated using ` | ` (space-pipe-space). Example -->
 
-#### NOTE: Multiple Google API keys can be specified to avoid quota exceed errors. To do this, specify them as a single string, separated using ` | ` (space-pipe-space). Example
+<!-- `GOOGLE_API_KEY = 'KEY1 | KEY2 | KEY3 | KEY4'` -->
 
-`GOOGLE_API_KEY = 'KEY1 | KEY2 | KEY3 | KEY4'`
+Following classes are created:
+1. Parser Class - Handles the Parsing of the input file that is provided
+2. Parking Class - Business Logic to Allocate and Deallocate Spaces for Parking and retrieve details is mentioned in this class
 
 ### Using Docker
 
